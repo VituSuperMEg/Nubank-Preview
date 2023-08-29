@@ -1,0 +1,157 @@
+@import "./@imports/colors";
+@import "./@imports/mixins";
+@import "./@imports/layout";
+@import "./@imports/typography";
+@import "./@imports/boxshadow";
+@import "./@imports/scroll";
+@import "./@imports/circle";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: $black-300;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+h1 {
+  font-family: $sora;
+  font-size: $title;
+  color: $purple;
+  font-weight: $light;
+}
+.title {
+  font-family: $sora;
+  font-size: $title;
+  color: $gray;
+  font-weight: $light;
+
+  span {
+    color: $purple;
+  }
+}
+.title-white {
+  font-family: $sora;
+  font-size: $title;
+  color: white;
+  font-weight: $light;
+  font-size: 40px;
+}
+.subtitle {
+  font-family: $poppins;
+  font-weight: $normal;
+  text-align: center;
+  color: $gray;
+}
+button {
+  background: $purple-500;
+  width: 200px;
+  height: 40px;
+  border-radius: 4px;
+  color: $white;
+  font-family: $sora;
+  border: none;
+  box-shadow: $shadow-purple;
+  cursor: pointer;
+
+  &:hover {
+    transition: 0.5s;
+    box-shadow: $shadow-purple-hover;
+  }
+}
+.linear {
+  width: 150%;
+  height: 300px;
+  background: $gradient;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  @include responsive() {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+  }
+}
+.vatagens {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  i {
+    color: $purple;
+    font-size: 30px;
+  }
+  h2 {
+    color: $purple;
+    font-weight: $light;
+    font-family: $sora;
+    font-size: 20px;
+  }
+  p {
+    text-align: center;
+    color: $gray-400;
+    font-family: $poppins;
+    line-height: 20px;
+    font-size: 14px;
+  }
+}
+.box {
+  background: $white;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  justify-content: space-between;
+  padding: 40px;
+
+  h2 {
+    font-family: $sora;
+    font-weight: $light;
+
+    span {
+      font-family: $sora;
+      color: $purple-700;
+      font-weight: $bold;
+    }
+  }
+  input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid $gray;
+    width: 100%;
+    padding-bottom: 10px;
+    outline: none;
+  }
+}
+.box-outline {
+  width: 450px;
+  height: 100px;
+  border: 1px solid $gray;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap : 20px;
+  i {
+    color : $purple-200;
+  }
+}
